@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Mushroom
   - Enemy
+  - Scorpion
   layers:
   - Default
   - TransparentFX
