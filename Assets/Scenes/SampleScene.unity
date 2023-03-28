@@ -221,7 +221,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -296,8 +296,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mushroomPrefab: {fileID: 9016401668687272156, guid: 68c6ac4ecbd5aa4439c01e7ed0e057d4, type: 3}
   numMushroomsToSpawn: 25
-  spawnPoint1: {x: -8, y: 4}
-  spawnPoint2: {x: 8, y: -1}
+  spawnPoint1: {x: -15, y: 9}
+  spawnPoint2: {x: 16, y: -2}
   gridSize: {x: 1, y: 1}
 --- !u!1001 &2135752803
 PrefabInstance:
@@ -306,17 +306,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 499607421, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1747184425628188896, guid: 834f705243ac6244d8930e3218330de8, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1747184425628188896, guid: 834f705243ac6244d8930e3218330de8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.62
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1747184425628188896, guid: 834f705243ac6244d8930e3218330de8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.06
+      value: -6.8
       objectReference: {fileID: 0}
     - target: {fileID: 1747184425628188896, guid: 834f705243ac6244d8930e3218330de8, type: 3}
       propertyPath: m_LocalPosition.z
