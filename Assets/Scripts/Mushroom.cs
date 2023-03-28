@@ -28,7 +28,6 @@ public class Mushroom : MonoBehaviour
         isPoisoned = true;
 
         // Temp way to show poison
-        Debug.Log("Mushroom poisoned.");
         GetComponent<SpriteRenderer>().color = new Color(153f / 255f, 1f, 0f, 1f);
     }
 }
