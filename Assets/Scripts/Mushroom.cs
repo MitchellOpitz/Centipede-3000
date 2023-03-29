@@ -5,7 +5,7 @@ public class Mushroom : MonoBehaviour
     public int health = 4; // the amount of hits it can take before being destroyed
     public int points = 1;
 
-    private bool isPoisoned = false;
+    public bool isPoisoned = false;
 
     private void Start()
     {

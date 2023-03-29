@@ -35,8 +35,16 @@ public class CentipedeMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Mushroom"))
         {
-            Debug.Log("Touched mushroom.");
-            ChangeDirection();
+            Mushroom mushroom = other.gameObject.GetComponent<Mushroom>();
+            if (!mushroom.isPoisoned)
+            {
+                Debug.Log("Touched non-poisoned mushroom.");
+                ChangeDirection();
+            } else
+            {
+                Debug.Log("Touched poisoned mushroom.");
+                ChangeDirection();
+            }
         }
     }
 }
