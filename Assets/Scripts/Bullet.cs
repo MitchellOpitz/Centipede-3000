@@ -25,6 +25,13 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.CompareTag("Centipede"))
+        {
+            // Handle collision with enemy
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+
         if (other.gameObject.CompareTag("Scorpion"))
         {
             // Handle collision with enemy

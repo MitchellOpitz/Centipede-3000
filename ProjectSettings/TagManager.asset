@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Mushroom
-  - Enemy
   - Scorpion
+  - Centipede
   layers:
   - Default
   - TransparentFX
