@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8c4e83227e1e40c4086a5386fa3aacbb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - segmentPrefab: {instanceID: 0}
+  - headSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  - bodySprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7422184544763288197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7422184544763288195}
+  - component: {fileID: 7422184544763288194}
+  m_Layer: 0
+  m_Name: Centipede
+  m_TagString: Centipede
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7422184544763288195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7422184544763288197}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.06, y: 7.52, z: -9.810454}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7422184544763288194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7422184544763288197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4e83227e1e40c4086a5386fa3aacbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  segmentPrefab: {fileID: 1053573370028687858, guid: d96ef9415e961f94f8452e350aad22ca, type: 3}
+  mushroomPrefab: {fileID: 7432319562668904359, guid: 68c6ac4ecbd5aa4439c01e7ed0e057d4, type: 3}
+  size: 12
+  headSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  bodySprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 448
+  homeArea: {fileID: 3663589681906052426, guid: 9f82242f9d1662f479a8f98938d67873, type: 3}
+  speed: 10

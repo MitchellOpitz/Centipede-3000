@@ -28,8 +28,8 @@ public class Bullet : MonoBehaviour
         if (other.gameObject.CompareTag("Centipede"))
         {
             // Handle collision with enemy
-            Destroy(other.gameObject);
             Destroy(gameObject);
+            other.gameObject.GetComponent<CentipedeSegment>().TakeDamage();
         }
 
         if (other.gameObject.CompareTag("Scorpion"))

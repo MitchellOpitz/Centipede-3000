@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8973520677464577340}
   - component: {fileID: 8973520677464577331}
   - component: {fileID: 8973520677464577328}
-  m_Layer: 0
-  m_Name: CentipedeHead
+  m_Layer: 8
+  m_Name: OldCentipedeHead
   m_TagString: Centipede
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

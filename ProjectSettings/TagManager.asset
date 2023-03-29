@@ -7,6 +7,7 @@ TagManager:
   - Mushroom
   - Scorpion
   - Centipede
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -14,10 +15,10 @@ TagManager:
   - PostProcessing
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Barrier
+  - Mushroom
+  - Centipede
+  - Bullet
   - 
   - 
   - 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5325096839984317656}
   - component: {fileID: 1409536204244446188}
   - component: {fileID: 7432319562668904359}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mushroom
   m_TagString: Mushroom
   m_Icon: {fileID: 0}
@@ -146,3 +146,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 4
   points: 1
+  isPoisoned: 0
