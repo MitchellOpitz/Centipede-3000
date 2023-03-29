@@ -120,7 +120,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &8973520677464577328
 MonoBehaviour:
@@ -135,6 +135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  maxX: 10
-  minX: -10
+  maxX: 17
+  minX: -17
   yOffset: -1

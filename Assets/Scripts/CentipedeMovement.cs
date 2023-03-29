@@ -20,9 +20,23 @@ public class CentipedeMovement : MonoBehaviour
         // check if we reached the edge of the screen
         if (transform.position.x >= maxX || transform.position.x <= minX)
         {
-            // move down and change direction
-            direction = new Vector3(direction.x * -1, 0, 0);
-            transform.position += new Vector3(0, yOffset, 0);
+            ChangeDirection();
+        }
+    }
+
+    private void ChangeDirection()
+    {
+        // move down and change direction
+        direction = new Vector3(direction.x * -1, 0, 0);
+        transform.position += new Vector3(0, yOffset, 0);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Mushroom"))
+        {
+            Debug.Log("Touched mushroom.");
+            ChangeDirection();
         }
     }
 }
