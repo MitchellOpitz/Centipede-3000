@@ -9,11 +9,17 @@ public class CentipedeSpawner : MonoBehaviour
 
     void Start()
     {
-        SpawnHead();
+        Spawn();
     }
 
-    void SpawnHead()
+    public void Spawn()
     {
+        StartCoroutine(SpawnHead());
+    }
+
+    public IEnumerator SpawnHead()
+    {
+        yield return new WaitForSeconds(3f);
         GameObject newHead = Instantiate(headPrefab, spawnPoint, Quaternion.identity);
     }
 

@@ -82,7 +82,21 @@ public class Centipede : MonoBehaviour
         }
 
         segments.Remove(segment);
+
+        if (segment.isHead)
+        {
+            FindObjectOfType<ScoreManager>().AddPoints(100);
+        } else
+        {
+            FindObjectOfType<ScoreManager>().AddPoints(10);
+        }
         Destroy(segment.gameObject);
+        
+        if(segments.Count == 0)
+        {
+            FindObjectOfType<CentipedeSpawner>().Spawn();
+            Destroy(gameObject);
+        }
     }
 
     private Vector2 GridPosition(Vector2 position)

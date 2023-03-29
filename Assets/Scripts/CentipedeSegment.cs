@@ -12,7 +12,7 @@ public class CentipedeSegment : MonoBehaviour
     public bool isHead => ahead == null;
 
     private Vector2 targetPosition;
-    private Vector2 direction = Vector2.right + Vector2.down;
+    private Vector2 direction = Vector2.left + Vector2.down;
 
     // Start is called before the first frame update
     void Awake()
