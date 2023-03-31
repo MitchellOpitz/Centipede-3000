@@ -54,7 +54,7 @@ public class CentipedeSegment : MonoBehaviour
             {
                 isPoisoned = true;
                 direction.y = -1f;
-                Debug.Log("Head poisoned.");
+                //Debug.Log("Head poisoned.");
 
             } else
             {
@@ -81,8 +81,8 @@ public class CentipedeSegment : MonoBehaviour
             Bounds homeBounds = centipede.homeArea.bounds;
             if (targetPosition.y < homeBounds.min.y)
             {
-                Debug.Log("Reached bottom.");
-                Debug.Log("Head Not Poisoned.");
+                //Debug.Log("Reached bottom.");
+                //Debug.Log("Head Not Poisoned.");
                 isPoisoned = false;
             }
         }
@@ -102,12 +102,12 @@ public class CentipedeSegment : MonoBehaviour
         if (ahead != null && ahead.isPoisoned)
         {
             isPoisoned = true;
-            Debug.Log("Segment Poisoned.");
+            //Debug.Log("Segment Poisoned.");
         }
         else
         {
             isPoisoned = false;
-            Debug.Log("Segment Not Poisoned.");
+            //Debug.Log("Segment Not Poisoned.");
         }
 
         if (behind != null)
