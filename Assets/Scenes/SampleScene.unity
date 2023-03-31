@@ -247,6 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 111539122}
   - component: {fileID: 111539121}
+  - component: {fileID: 111539123}
   m_Layer: 0
   m_Name: CentipedeSpawner
   m_TagString: Untagged
@@ -282,6 +283,20 @@ Transform:
   m_Father: {fileID: 911964843}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &111539123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111539120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 029361dd6f4068a42bec77beed5c3d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: {fileID: 908857690}
+  hueShiftAmount: 180
 --- !u!1 &400709356
 GameObject:
   m_ObjectHideFlags: 0
