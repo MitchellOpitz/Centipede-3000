@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7422184544763288195}
   - component: {fileID: 7422184544763288194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Centipede
   m_TagString: Centipede
   m_Icon: {fileID: 0}
@@ -52,4 +52,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 448
   homeArea: {fileID: 3663589681906052426, guid: 9f82242f9d1662f479a8f98938d67873, type: 3}
-  speed: 10
+  speed: 5

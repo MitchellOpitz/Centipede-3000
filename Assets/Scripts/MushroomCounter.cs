@@ -9,12 +9,12 @@ public class MushroomCounter : MonoBehaviour
     public void Add()
     {
         mushroomCount++;
-        Debug.Log("Mushroom Count: " + mushroomCount);
+        //Debug.Log("Mushroom Count: " + mushroomCount);
     }
 
     public void Remove()
     {
         mushroomCount--;
-        Debug.Log("Mushroom Count: " + mushroomCount);
+        //Debug.Log("Mushroom Count: " + mushroomCount);
     }
 }

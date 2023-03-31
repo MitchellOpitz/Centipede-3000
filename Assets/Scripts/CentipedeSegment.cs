@@ -14,6 +14,8 @@ public class CentipedeSegment : MonoBehaviour
     private Vector2 targetPosition;
     private Vector2 direction = Vector2.left + Vector2.down;
 
+    private bool isPoisoned = false;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,7 +25,6 @@ public class CentipedeSegment : MonoBehaviour
 
     private void Update()
     {
-
         if (isHead && Vector2.Distance(transform.position, targetPosition) < 0.1f)
         {
             UpdateHeadSegment();
@@ -47,17 +48,42 @@ public class CentipedeSegment : MonoBehaviour
 
         if (Physics2D.OverlapBox(targetPosition, Vector2.zero, 0f, centipede.collisionMask))
         {
-            direction.x = -direction.x;
+            Mushroom mushroom = Physics2D.OverlapBoxAll(targetPosition, Vector2.zero, 0f, centipede.collisionMask)[0].gameObject.GetComponent<Mushroom>();
+
+            if (mushroom != null && mushroom.isPoisoned)
+            {
+                isPoisoned = true;
+                direction.y = -1f;
+                Debug.Log("Head poisoned.");
+
+            } else
+            {
+                direction.x = -direction.x;
+                targetPosition.x = gridPosition.x;
+                targetPosition.y = gridPosition.y + direction.y;
+
+                Bounds homeBounds = centipede.homeArea.bounds;
+
+                if ((direction.y == 1f && targetPosition.y > homeBounds.max.y) ||
+                    (direction.y == -1f && targetPosition.y < homeBounds.min.y))
+                {
+                    direction.y = -direction.y;
+                    targetPosition.y = gridPosition.y + direction.y;
+                }
+            }
+        }
+
+        if (isPoisoned)
+        {
             targetPosition.x = gridPosition.x;
             targetPosition.y = gridPosition.y + direction.y;
 
             Bounds homeBounds = centipede.homeArea.bounds;
-
-            if ((direction.y == 1f && targetPosition.y > homeBounds.max.y) ||
-                (direction.y == -1f && targetPosition.y < homeBounds.min.y))
+            if (targetPosition.y < homeBounds.min.y)
             {
-                direction.y = -direction.y;
-                targetPosition.y = gridPosition.y + direction.y;
+                Debug.Log("Reached bottom.");
+                Debug.Log("Head Not Poisoned.");
+                isPoisoned = false;
             }
         }
 
@@ -72,6 +98,17 @@ public class CentipedeSegment : MonoBehaviour
 
         targetPosition = GridPosition(ahead.transform.position);
         direction = ahead.direction;
+
+        if (ahead != null && ahead.isPoisoned)
+        {
+            isPoisoned = true;
+            Debug.Log("Segment Poisoned.");
+        }
+        else
+        {
+            isPoisoned = false;
+            Debug.Log("Segment Not Poisoned.");
+        }
 
         if (behind != null)
         {
