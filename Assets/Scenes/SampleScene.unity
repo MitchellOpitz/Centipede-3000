@@ -1276,7 +1276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mushroomPrefab: {fileID: 9016401668687272156, guid: 68c6ac4ecbd5aa4439c01e7ed0e057d4, type: 3}
-  numMushroomsToSpawn: 30
+  numMushroomsToSpawn: 0
   spawnPoint1: {x: -15, y: 9}
   spawnPoint2: {x: 16, y: -7}
   gridSize: {x: 1, y: 1}
