@@ -1291,7 +1291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mushroomPrefab: {fileID: 9016401668687272156, guid: 68c6ac4ecbd5aa4439c01e7ed0e057d4, type: 3}
-  numMushroomsToSpawn: 30
+  numMushroomsToSpawn: 0
   spawnPoint1: {x: -15, y: 9}
   spawnPoint2: {x: 16, y: -7}
   gridSize: {x: 1, y: 1}
@@ -1353,7 +1353,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.25882354}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.14901961}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1429,6 +1429,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 499607421, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 499607421, guid: 834f705243ac6244d8930e3218330de8, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.5
       objectReference: {fileID: 0}
@@ -1496,6 +1500,22 @@ PrefabInstance:
       propertyPath: speed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1747184425628188902, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747184425628188902, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747184425628188902, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747184425628188903, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c2f46ad4ff08cdf4a8da3422d960cbd1, type: 3}
     - target: {fileID: 1747184425628188907, guid: 834f705243ac6244d8930e3218330de8, type: 3}
       propertyPath: m_Name
       value: Player
