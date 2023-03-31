@@ -152,3 +152,5 @@ MonoBehaviour:
   health: 4
   points: 1
   isPoisoned: 0
+  redParticles: {fileID: 7208899319133786326, guid: 28d5170fac880f64fa47a0fff3a5c851, type: 3}
+  greenParticles: {fileID: 9212437547802705525, guid: d200653713789154cae2a16cb56e88dc, type: 3}

@@ -11,6 +11,9 @@ public class Mushroom : MonoBehaviour
     private int currentSpriteIndex = 0;
     private SpriteRenderer spriteRenderer;
 
+    public ParticleSystem redParticles;
+    public ParticleSystem greenParticles;
+
     private void Start()
     {
         isPoisoned = false;
@@ -21,6 +24,8 @@ public class Mushroom : MonoBehaviour
     public void TakeDamage()
     {
         health--; // decrease the health by 1
+        FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(redParticles, transform.position);
+        FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(greenParticles, transform.position);
 
         if (health <= 0) // if the health is 0 or less
         {
