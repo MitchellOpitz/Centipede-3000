@@ -74,12 +74,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2747690628134850419, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
+  m_Sprite: {fileID: 4315506946141470425, guid: e2c5e594b1eb0674199b7f6945eb4946, type: 3}
   m_Color: {r: 1, g: 0.9767441, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 0.8828125}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -123,8 +123,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.8828125}
-    newSize: {x: 1, y: 0.8828125}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -144,6 +144,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2af2da5ef3e6924da4611c8f708fb28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mushroomSprites:
+  - {fileID: 4315506946141470425, guid: e2c5e594b1eb0674199b7f6945eb4946, type: 3}
+  - {fileID: -8641565482479284267, guid: e2c5e594b1eb0674199b7f6945eb4946, type: 3}
+  - {fileID: -2042072573829909366, guid: e2c5e594b1eb0674199b7f6945eb4946, type: 3}
+  - {fileID: 2509030704489203561, guid: e2c5e594b1eb0674199b7f6945eb4946, type: 3}
   health: 4
   points: 1
   isPoisoned: 0
