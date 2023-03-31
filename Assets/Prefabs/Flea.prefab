@@ -141,3 +141,6 @@ MonoBehaviour:
   minMushroomY: -7
   points: 200
   mushroomPrefab: {fileID: 9016401668687272156, guid: 68c6ac4ecbd5aa4439c01e7ed0e057d4, type: 3}
+  redParticles: {fileID: 7208899319133786326, guid: 28d5170fac880f64fa47a0fff3a5c851, type: 3}
+  greenParticles: {fileID: 9212437547802705525, guid: d200653713789154cae2a16cb56e88dc, type: 3}
+  whiteParticles: {fileID: 7208899319133786326, guid: fbd101a3935dd0b498f5a4e0d5ccfb28, type: 3}

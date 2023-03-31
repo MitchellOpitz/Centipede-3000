@@ -13,6 +13,10 @@ public class Flea : MonoBehaviour
 
     public GameObject mushroomPrefab;
 
+    public ParticleSystem redParticles;
+    public ParticleSystem greenParticles;
+    public ParticleSystem whiteParticles;
+
     private Vector2 targetPosition;
     private Vector2 direction = Vector2.down;
 
@@ -83,6 +87,9 @@ public class Flea : MonoBehaviour
     public void TakeDamage()
     {
         FindObjectOfType<ScoreManager>().AddPoints(points);
+        FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(redParticles, transform.position);
+        FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(greenParticles, transform.position);
+        FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(whiteParticles, transform.position);
         Destroy(gameObject); // destroy the current mushroom object
     }
 }
