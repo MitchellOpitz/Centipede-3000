@@ -52,4 +52,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 448
   homeArea: {fileID: 3663589681906052426, guid: 9f82242f9d1662f479a8f98938d67873, type: 3}
-  speed: 5
+  speed: 10

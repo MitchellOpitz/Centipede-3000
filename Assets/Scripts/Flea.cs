@@ -9,6 +9,7 @@ public class Flea : MonoBehaviour
     public float mushroomSpawnChance = 0.5f; // Chance of spawning a mushroom at each grid point
     public float maxMushroomY = 10f;
     public float minMushroomY = -10f;
+    public int points = 200;
 
     public GameObject mushroomPrefab;
 
@@ -77,5 +78,11 @@ public class Flea : MonoBehaviour
         position.x = Mathf.Round(position.x);
         position.y = Mathf.Round(position.y);
         return position;
+    }
+
+    public void TakeDamage()
+    {
+        FindObjectOfType<ScoreManager>().AddPoints(points);
+        Destroy(gameObject); // destroy the current mushroom object
     }
 }

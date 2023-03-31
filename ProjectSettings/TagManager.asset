@@ -8,6 +8,7 @@ TagManager:
   - Scorpion
   - Centipede
   - Bullet
+  - Flea
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Mushroom
   - Centipede
   - Bullet
-  - 
+  - Flea
   - 
   - 
   - 
