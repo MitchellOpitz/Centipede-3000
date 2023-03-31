@@ -59,8 +59,5 @@ public class Mushroom : MonoBehaviour
         isPoisoned = true;
 
         spriteRenderer.sprite = poisonMushroomSprites[currentSpriteIndex];
-
-        // Temp way to show poison
-        GetComponent<SpriteRenderer>().color = new Color(153f / 255f, 1f, 0f, 1f);
     }
 }
