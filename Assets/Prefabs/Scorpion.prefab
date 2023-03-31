@@ -154,3 +154,5 @@ MonoBehaviour:
   speed: 10
   maxX: 20
   points: 1000
+  redParticles: {fileID: 7208899319133786326, guid: 28d5170fac880f64fa47a0fff3a5c851, type: 3}
+  whiteParticles: {fileID: 7208899319133786326, guid: fbd101a3935dd0b498f5a4e0d5ccfb28, type: 3}

@@ -8,6 +8,9 @@ public class Scorpion : MonoBehaviour
     public float maxX = 10f;
     public int points = 1000;
 
+    public ParticleSystem redParticles;
+    public ParticleSystem whiteParticles;
+
     private Rigidbody2D rb;
 
     private void Start()
@@ -44,6 +47,8 @@ public class Scorpion : MonoBehaviour
     public void TakeDamage()
     {
         FindObjectOfType<ScoreManager>().AddPoints(points);
+        FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(redParticles, transform.position);
+        FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(whiteParticles, transform.position);
         Destroy(gameObject); // destroy the current mushroom object
     }
 }
