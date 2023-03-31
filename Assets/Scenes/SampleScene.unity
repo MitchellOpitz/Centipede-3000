@@ -560,6 +560,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &755654926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 755654927}
+  - component: {fileID: 755654928}
+  m_Layer: 0
+  m_Name: FleaSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &755654927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755654926}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40.26162, y: -5.8042026, z: -6.067983}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 911964843}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &755654928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755654926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b64dc21788d45045af5ef3e2d9a0565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fleaPrefab: {fileID: 2434241863889748759, guid: 8a0c3bffa8474694fb75070eb0829bbc, type: 3}
+  spawnDelay: 3
+  mushroomCountThreshold: 25
+  minX: -15
+  maxX: 16
+  spawnY: 11
 --- !u!1 &840216621
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +792,7 @@ Transform:
   - {fileID: 111539122}
   - {fileID: 1773662002}
   - {fileID: 892231638}
+  - {fileID: 755654927}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
