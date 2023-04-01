@@ -49,6 +49,7 @@ public class Scorpion : MonoBehaviour
         FindObjectOfType<ScoreManager>().AddPoints(points);
         FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(redParticles, transform.position);
         FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(whiteParticles, transform.position);
+        FindObjectOfType<CameraShake>().Shake();
         Destroy(gameObject); // destroy the current mushroom object
     }
 }

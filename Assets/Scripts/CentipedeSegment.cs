@@ -125,6 +125,7 @@ public class CentipedeSegment : MonoBehaviour
 
     public void TakeDamage()
     {
+        FindObjectOfType<CameraShake>().Shake();
         centipede.Remove(this, transform.position);
     }
 }

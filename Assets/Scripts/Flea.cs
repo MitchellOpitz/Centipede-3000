@@ -90,6 +90,7 @@ public class Flea : MonoBehaviour
         FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(redParticles, transform.position);
         FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(greenParticles, transform.position);
         FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(whiteParticles, transform.position);
+        FindObjectOfType<CameraShake>().Shake();
         Destroy(gameObject); // destroy the current mushroom object
     }
 }
