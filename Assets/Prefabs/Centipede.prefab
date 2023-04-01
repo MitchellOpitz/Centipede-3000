@@ -46,8 +46,8 @@ MonoBehaviour:
   segmentPrefab: {fileID: 1053573370028687858, guid: d96ef9415e961f94f8452e350aad22ca, type: 3}
   mushroomPrefab: {fileID: 7432319562668904359, guid: 68c6ac4ecbd5aa4439c01e7ed0e057d4, type: 3}
   size: 12
-  headSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  bodySprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  headSprite: {fileID: 21300000, guid: affe30fd719156643920fa5bb1a85a38, type: 3}
+  bodySprite: {fileID: 21300000, guid: d343e800a1e60c0479ac73230287cc86, type: 3}
   collisionMask:
     serializedVersion: 2
     m_Bits: 448
