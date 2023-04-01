@@ -2541,7 +2541,6 @@ GameObject:
   - component: {fileID: 1882864562}
   - component: {fileID: 1882864561}
   - component: {fileID: 1882864563}
-  - component: {fileID: 1882864564}
   m_Layer: 0
   m_Name: PlayerArea
   m_TagString: Untagged
@@ -2621,7 +2620,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882864560}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2712,23 +2711,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!114 &1882864564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882864560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d3a88f0a026ef943bcca9b0173e5d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lineRenderer: {fileID: 1882864563}
-  numberOfPoints: 50
-  updateFrequency: 0.025
-  amplitude: 0.25
-  shiftDuration: 0.025
 --- !u!1 &2037972733
 GameObject:
   m_ObjectHideFlags: 0
