@@ -18,6 +18,10 @@ public class Centipede : MonoBehaviour
     public BoxCollider2D homeArea;
     public float speed = 1f;
 
+    public ParticleSystem redParticles;
+    public ParticleSystem greenParticles;
+    public ParticleSystem whiteParticles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +67,7 @@ public class Centipede : MonoBehaviour
         }
     }
 
-    public void Remove(CentipedeSegment segment)
+    public void Remove(CentipedeSegment segment, Vector3 segmentPosition)
     {
         Vector3 position = GridPosition(segment.transform.position);
         Instantiate(mushroomPrefab, position, Quaternion.identity);
@@ -86,9 +90,14 @@ public class Centipede : MonoBehaviour
         if (segment.isHead)
         {
             FindObjectOfType<ScoreManager>().AddPoints(100);
+            FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(greenParticles, segmentPosition);
+            FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(whiteParticles, segmentPosition);
+            FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(redParticles, segmentPosition);
         } else
         {
             FindObjectOfType<ScoreManager>().AddPoints(10);
+            FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(greenParticles, segmentPosition);
+            FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(whiteParticles, segmentPosition);
         }
         Destroy(segment.gameObject);
         

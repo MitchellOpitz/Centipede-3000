@@ -125,6 +125,6 @@ public class CentipedeSegment : MonoBehaviour
 
     public void TakeDamage()
     {
-        centipede.Remove(this);
+        centipede.Remove(this, transform.position);
     }
 }
