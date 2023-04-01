@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5325096839984317656}
   - component: {fileID: 1409536204244446188}
   - component: {fileID: 7432319562668904359}
+  - component: {fileID: 4159887935722027736}
   m_Layer: 7
   m_Name: Mushroom
   m_TagString: Mushroom
@@ -160,3 +161,17 @@ MonoBehaviour:
   redParticles: {fileID: 7208899319133786326, guid: 28d5170fac880f64fa47a0fff3a5c851, type: 3}
   greenParticles: {fileID: 9212437547802705525, guid: d200653713789154cae2a16cb56e88dc, type: 3}
   whiteParticles: {fileID: 7208899319133786326, guid: fbd101a3935dd0b498f5a4e0d5ccfb28, type: 3}
+--- !u!114 &4159887935722027736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9016401668687272156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e428a40b0192b49a3c2412d025fd0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 1
+  scorePopUpPrefab: {fileID: 5301276141051815995, guid: bc2b9d2c00c27b84a8f5992dc0bc4ee4, type: 3}

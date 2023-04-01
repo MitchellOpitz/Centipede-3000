@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1226597680100140392}
   - component: {fileID: -2390191727339943891}
   - component: {fileID: 2434241863889748758}
+  - component: {fileID: 3712713986126955193}
   m_Layer: 10
   m_Name: Flea
   m_TagString: Flea
@@ -144,3 +145,17 @@ MonoBehaviour:
   redParticles: {fileID: 7208899319133786326, guid: 28d5170fac880f64fa47a0fff3a5c851, type: 3}
   greenParticles: {fileID: 9212437547802705525, guid: d200653713789154cae2a16cb56e88dc, type: 3}
   whiteParticles: {fileID: 7208899319133786326, guid: fbd101a3935dd0b498f5a4e0d5ccfb28, type: 3}
+--- !u!114 &3712713986126955193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2434241863889748759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e428a40b0192b49a3c2412d025fd0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 200
+  scorePopUpPrefab: {fileID: 5301276141051815995, guid: bc2b9d2c00c27b84a8f5992dc0bc4ee4, type: 3}

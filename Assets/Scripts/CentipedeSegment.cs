@@ -126,6 +126,14 @@ public class CentipedeSegment : MonoBehaviour
     public void TakeDamage()
     {
         FindObjectOfType<CameraShake>().Shake();
+        if (isHead)
+        {
+            GetComponent<ScoreDisplay>().UpdateScore(100);
+        } else
+        {
+            GetComponent<ScoreDisplay>().UpdateScore(10);
+        }
+        GetComponent<ScoreDisplay>().CallScore();
         centipede.Remove(this, transform.position);
     }
 }

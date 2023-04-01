@@ -40,6 +40,7 @@ public class Mushroom : MonoBehaviour
         {
             FindObjectOfType<ScoreManager>().AddPoints(points);
             FindObjectOfType<MushroomCounter>().Remove();
+            GetComponent<ScoreDisplay>().CallScore();
             Destroy(gameObject); // destroy the current mushroom object
         } else
         {

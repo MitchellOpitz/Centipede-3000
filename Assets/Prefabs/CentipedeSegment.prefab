@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3019356486532347120}
   - component: {fileID: 146868234466001635}
   - component: {fileID: 1053573370028687858}
+  - component: {fileID: -4258216098744302900}
   m_Layer: 8
   m_Name: CentipedeSegment
   m_TagString: Centipede
@@ -122,3 +123,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d291bbe056930344e9b29cf6749b75f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4258216098744302900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3494067175212908614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e428a40b0192b49a3c2412d025fd0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 5000
+  scorePopUpPrefab: {fileID: 5301276141051815995, guid: bc2b9d2c00c27b84a8f5992dc0bc4ee4, type: 3}
