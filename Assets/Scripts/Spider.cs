@@ -102,4 +102,12 @@ public class Spider : MonoBehaviour
         FindObjectOfType<CameraShake>().Shake();
         Destroy(gameObject);
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Mushroom"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
 }
