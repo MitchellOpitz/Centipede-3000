@@ -2987,6 +2987,46 @@ PrefabInstance:
       propertyPath: minY
       value: -9
       objectReference: {fileID: 0}
+    - target: {fileID: 1747184425628188900, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: overlapRadius
+      value: 0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747184425628188900, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: overlapOffset.x
+      value: -0.185
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747184425628188900, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: colliders.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747184425628188900, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: colliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747184425628188900, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: colliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747184425628188900, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: colliders.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747184425628188900, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: colliders.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747184425628188902, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: m_Size.x
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747184425628188902, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747184425628188902, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.185
+      objectReference: {fileID: 0}
     - target: {fileID: 1747184425628188907, guid: 834f705243ac6244d8930e3218330de8, type: 3}
       propertyPath: m_Name
       value: Player
