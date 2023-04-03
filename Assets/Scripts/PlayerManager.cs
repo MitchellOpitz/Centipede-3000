@@ -88,4 +88,10 @@ public class PlayerManager : MonoBehaviour
         GameOverCanvas.SetActive(true);
     }
 
+    public void ExtraLife()
+    {
+        currentLives++;
+        UpdateUI();
+    }
+
 }

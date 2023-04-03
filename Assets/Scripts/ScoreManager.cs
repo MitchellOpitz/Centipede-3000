@@ -9,9 +9,12 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverScoreText;
 
+    private int nextExtraLife;
+
     private void Start()
     {
         score = 0;
+        nextExtraLife = 12000;
         UpdateScoreText();
     }
 
@@ -25,6 +28,16 @@ public class ScoreManager : MonoBehaviour
     {
         score += points;
         UpdateScoreText();
+        ExtraLifeCheck();
+    }
+
+    private void ExtraLifeCheck()
+    {
+        if(score > nextExtraLife)
+        {
+            FindObjectOfType<PlayerManager>().ExtraLife();
+            nextExtraLife += 12000;
+        }
     }
 }
 
