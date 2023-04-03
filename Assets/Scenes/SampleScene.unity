@@ -302,6 +302,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1747184425628188896, guid: 834f705243ac6244d8930e3218330de8, type: 3}
   m_PrefabInstance: {fileID: 2135752803}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &284705078 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1747184425628188907, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+  m_PrefabInstance: {fileID: 2135752803}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &302091610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,6 +1873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1355063470}
   - component: {fileID: 1355063471}
+  - component: {fileID: 1355063472}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1902,6 +1908,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1629424100}
+--- !u!114 &1355063472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355063469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70850284b7166d4c9fdeb2837e4bf8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingLives: 3
+  playerSprite: {fileID: 21300000, guid: c2f46ad4ff08cdf4a8da3422d960cbd1, type: 3}
+  UIposition: {x: -15, y: 9}
+  player: {fileID: 284705078}
 --- !u!1 &1435279141
 GameObject:
   m_ObjectHideFlags: 0

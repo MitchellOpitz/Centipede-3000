@@ -46,6 +46,11 @@ public class PlayerMovement : MonoBehaviour
         {
             isColliding = true;
         }
+
+        if (other.gameObject.CompareTag("Centipede"))
+        {
+            FindObjectOfType<PlayerManager>().LoseLife();
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -55,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
             isColliding = false;
         }
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;

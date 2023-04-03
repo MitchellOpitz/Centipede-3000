@@ -15,10 +15,13 @@ public class BackgroundParallax : MonoBehaviour
 
     void LateUpdate()
     {
-        Vector3 deltaMovement = player.position - lastPlayerPosition;
-        float parallaxAmountX = deltaMovement.x * horizontalSpeed;
-        float parallaxAmountY = deltaMovement.y * verticalSpeed;
-        transform.position -= new Vector3(parallaxAmountX, parallaxAmountY, 0);
-        lastPlayerPosition = player.position;
+        if (player != null)
+        {
+            Vector3 deltaMovement = player.position - lastPlayerPosition;
+            float parallaxAmountX = deltaMovement.x * horizontalSpeed;
+            float parallaxAmountY = deltaMovement.y * verticalSpeed;
+            transform.position -= new Vector3(parallaxAmountX, parallaxAmountY, 0);
+            lastPlayerPosition = player.position;
+        }
     }
 }
