@@ -7,6 +7,7 @@ public class ScoreManager : MonoBehaviour
 {
     public static int score = 0;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI gameOverScoreText;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class ScoreManager : MonoBehaviour
     void UpdateScoreText()
     {
         scoreText.text = "Score: " + score.ToString();
+        gameOverScoreText.text = "Score: " + score.ToString();
     }
 
     public void AddPoints(int points)

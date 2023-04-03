@@ -8,6 +8,8 @@ public class PlayerManager : MonoBehaviour
     public int startingLives = 3;
     public Sprite playerSprite;
     public Vector2 UIposition;
+    public GameObject UICanvas;
+    public GameObject GameOverCanvas;
     public GameObject player;
 
     private int currentLives;
@@ -54,8 +56,8 @@ public class PlayerManager : MonoBehaviour
         if (currentLives <= 0)
         {
             // Player has lost all lives, trigger game over logic
-            Debug.Log("Game Over");
             Destroy(player);
+            StartCoroutine(GameOver());
         } else
         {
             // Respawn the player
@@ -77,6 +79,13 @@ public class PlayerManager : MonoBehaviour
         // Enable the player's collider and renderer
         player.GetComponent<Collider2D>().enabled = true;
         player.GetComponent<SpriteRenderer>().enabled = true;
+    }
+
+    IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(3f);
+        UICanvas.SetActive(false);
+        GameOverCanvas.SetActive(true);
     }
 
 }
