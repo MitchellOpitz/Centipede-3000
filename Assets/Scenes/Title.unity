@@ -444,6 +444,8 @@ MonoBehaviour:
   options:
   - text: Start
     sceneName: Gameplay
+  - text: High Scores
+    sceneName: HighScores
 --- !u!114 &1967904965
 MonoBehaviour:
   m_ObjectHideFlags: 0
