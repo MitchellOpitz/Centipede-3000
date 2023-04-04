@@ -94,7 +94,7 @@ public class PlayerManager : MonoBehaviour
 
         var highScorePanel = GameObject.Find("HighScorePanel");
         var retryPanel = GameObject.Find("RetryPanel");
-        if (highScore.CheckHighScore(score))
+        if (highScore.CheckHighScore(score) && highScore.PersonalBest(score))
         {
             highScorePanel.SetActive(true);
             retryPanel.SetActive(false);

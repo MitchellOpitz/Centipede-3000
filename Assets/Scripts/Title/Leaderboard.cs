@@ -70,4 +70,16 @@ public class Leaderboard : MonoBehaviour
         return false;
     }
 
+    public bool PersonalBest(int myScore)
+    {
+        int bestScore = PlayerPrefs.GetInt("HighScore", 0);
+
+        if (myScore > bestScore)
+        {
+            PlayerPrefs.SetInt("HighScore", myScore);
+            PlayerPrefs.Save();
+            return true;
+        }
+        return false;
+    }
 }
