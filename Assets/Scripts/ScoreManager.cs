@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static int score = 0;
+    public int score = 0;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverScoreText;
+
+    public UnityEvent<string, int> submitScoreEvent;
+    [SerializeField]
+    private TMP_InputField inputName;
 
     private int nextExtraLife;
 
@@ -38,6 +43,11 @@ public class ScoreManager : MonoBehaviour
             FindObjectOfType<PlayerManager>().ExtraLife();
             nextExtraLife += 12000;
         }
+    }
+
+    public void SubmitScore()
+    {
+        submitScoreEvent.Invoke(inputName.text, int.Parse(score.ToString()));
     }
 }
 

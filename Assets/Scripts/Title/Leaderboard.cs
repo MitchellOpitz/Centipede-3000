@@ -10,6 +10,7 @@ public class Leaderboard : MonoBehaviour
     private List<TextMeshProUGUI> names;
     [SerializeField]
     private List<TextMeshProUGUI> scores;
+    private List<int> scoresList = new List<int>(new int[10]);
 
     private string publicLeaderboardKey = "1b1e2bb647b1f858a6ea7822f0f30966ae876ca1c62fffc571144a8122946fbc";
 
@@ -36,6 +37,33 @@ public class Leaderboard : MonoBehaviour
         {
             GetLeaderboard();
         }));
+    }
+
+    public void GetHighScores()
+    {
+        Debug.Log("Retrieving High Scores.");
+        LeaderboardCreator.GetLeaderboard(publicLeaderboardKey, ((msg) =>
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                scoresList[i] = (int)msg[i].Score;
+                Debug.Log(scoresList[i]);
+            }
+        }));
+    }
+
+    public bool CheckHighScore(int myScore)
+    {
+        for (int i = 0; i < scoresList.Count; i++)
+        {
+            Debug.Log("Comparing: " + myScore + " to " + scoresList[i]);
+            if (myScore > scoresList[i])
+            {
+                return true;
+            }
+        }
+        Debug.Log("No High Score.");
+        return false;
     }
 
 }

@@ -83,9 +83,23 @@ public class PlayerManager : MonoBehaviour
 
     IEnumerator GameOver()
     {
+        var score = FindObjectOfType<ScoreManager>().score;
+        var highScore = FindObjectOfType<Leaderboard>();
+        highScore.GetHighScores();
+
         yield return new WaitForSeconds(3f);
+
         UICanvas.SetActive(false);
         GameOverCanvas.SetActive(true);
+
+        var highScorePanel = GameObject.Find("HighScorePanel");
+        if (highScore.CheckHighScore(score))
+        {
+            highScorePanel.SetActive(true);
+        } else
+        {
+            highScorePanel.SetActive(false);
+        }
     }
 
     public void ExtraLife()
