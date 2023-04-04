@@ -47,7 +47,9 @@ public class PlayerMovement : MonoBehaviour
             isColliding = true;
         }
 
-        if (other.gameObject.CompareTag("Centipede"))
+        if (other.gameObject.CompareTag("Centipede") ||
+            other.gameObject.CompareTag("Flea") ||
+            other.gameObject.CompareTag("Spider"))
         {
             FindObjectOfType<PlayerManager>().LoseLife();
         }
