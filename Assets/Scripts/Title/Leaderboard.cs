@@ -28,6 +28,10 @@ public class Leaderboard : MonoBehaviour
                 names[i].text = (i + 1).ToString() + ".) " + msg[i].Username;
                 scores[i].text = msg[i].Score.ToString();
             }
+            if(GameObject.Find("Loading") != null)
+            {
+                GameObject.Find("Loading").SetActive(false);
+            }
         }));
     }
 

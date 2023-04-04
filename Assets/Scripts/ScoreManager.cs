@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -48,6 +49,7 @@ public class ScoreManager : MonoBehaviour
     public void SubmitScore()
     {
         submitScoreEvent.Invoke(inputName.text, int.Parse(score.ToString()));
+        SceneManager.LoadScene("HighScores");
     }
 }
 
