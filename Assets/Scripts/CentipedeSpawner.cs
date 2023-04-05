@@ -18,16 +18,15 @@ public class CentipedeSpawner : MonoBehaviour
     }
     public IEnumerator SpawnHead()
     {
+        // Randomly generate a hue shift value
+        GetComponent<HueShift>().RandomizeHueShift();
+
         yield return new WaitForSeconds(3f);
         GameObject newHead = Instantiate(headPrefab, spawnPoint, Quaternion.identity);
 
         // Get the sprite renderer component of the new centipede
         SpriteRenderer spriteRenderer = newHead.GetComponent<SpriteRenderer>();
 
-        // Randomly generate a hue shift value
-        float hueShift = Random.Range(-180f, 180f);
-
-        GetComponent<HueShift>().SetHueShift(hueShift);
     }
 
 }

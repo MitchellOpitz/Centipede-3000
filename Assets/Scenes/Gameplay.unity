@@ -348,7 +348,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: {fileID: 908857690}
-  hueShiftAmount: 0
+  minShiftAmount: 20
+  hueShiftTime: 1.5
 --- !u!1 &130897911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,7 +1622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fleaPrefab: {fileID: 2434241863889748759, guid: 8a0c3bffa8474694fb75070eb0829bbc, type: 3}
   spawnDelay: 3
-  mushroomCountThreshold: 25
+  mushroomCountThreshold: 30
   minX: -15
   maxX: 16
   spawnY: 11
