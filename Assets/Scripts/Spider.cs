@@ -15,6 +15,7 @@ public class Spider : MonoBehaviour
     private Vector2 currentTarget;
     private int xDirection;
     private bool isMovingRight;
+    private SFXManager sfxManager;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class Spider : MonoBehaviour
         }
 
         xDirection = isMovingRight ? 1 : -1;
+        sfxManager = FindObjectOfType<SFXManager>();
     }
 
     private void Update()
@@ -100,6 +102,7 @@ public class Spider : MonoBehaviour
         FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(greenParticles, transform.position);
         FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(whiteParticles, transform.position);
         FindObjectOfType<CameraShake>().Shake();
+        sfxManager.Play("Splat");
         Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D other)

@@ -19,12 +19,14 @@ public class Flea : MonoBehaviour
 
     private Vector2 targetPosition;
     private Vector2 direction = Vector2.down;
+    private SFXManager sfxManager;
 
     // Start is called before the first frame update
     void Start()
     {
         targetPosition = GridPosition(transform.position);
         targetPosition.y += direction.y;
+        sfxManager = FindObjectOfType<SFXManager>();
     }
 
     // Update is called once per frame
@@ -92,6 +94,7 @@ public class Flea : MonoBehaviour
         FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(whiteParticles, transform.position);
         FindObjectOfType<CameraShake>().Shake();
         GetComponent<ScoreDisplay>().CallScore();
+        sfxManager.Play("Splat");
         Destroy(gameObject); // destroy the current mushroom object
     }
 }

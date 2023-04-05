@@ -8,6 +8,12 @@ public class PlayerShoot : MonoBehaviour
     public float fireRate = 0.2f; // time between shots in seconds
 
     private float nextFireTime = 0f;
+    private SFXManager sfxManager;
+
+    private void Start()
+    {
+        sfxManager = FindObjectOfType<SFXManager>();
+    }
 
     void Update()
     {
@@ -23,5 +29,6 @@ public class PlayerShoot : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * bulletSpeed;
+        sfxManager.Play("Shoot");
     }
 }

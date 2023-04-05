@@ -15,12 +15,18 @@ public class CentipedeSegment : MonoBehaviour
     private Vector2 direction = Vector2.left + Vector2.down;
 
     private bool isPoisoned = false;
+    private SFXManager sfxManager;
 
     // Start is called before the first frame update
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         targetPosition = transform.position;
+    }
+
+    private void Start()
+    {
+        sfxManager = FindObjectOfType<SFXManager>();
     }
 
     private void Update()
@@ -134,6 +140,7 @@ public class CentipedeSegment : MonoBehaviour
             GetComponent<ScoreDisplay>().UpdateScore(10);
         }
         GetComponent<ScoreDisplay>().CallScore();
+        sfxManager.Play("Splat");
         centipede.Remove(this, transform.position);
     }
 }

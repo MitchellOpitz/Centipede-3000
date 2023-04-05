@@ -12,10 +12,12 @@ public class Scorpion : MonoBehaviour
     public ParticleSystem whiteParticles;
 
     private Rigidbody2D rb;
+    private SFXManager sfxManager;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sfxManager = FindObjectOfType<SFXManager>();
     }
 
     private void Update()
@@ -51,6 +53,7 @@ public class Scorpion : MonoBehaviour
         FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(whiteParticles, transform.position);
         FindObjectOfType<CameraShake>().Shake();
         GetComponent<ScoreDisplay>().CallScore();
+        sfxManager.Play("Splat");
         Destroy(gameObject); // destroy the current mushroom object
     }
 }
