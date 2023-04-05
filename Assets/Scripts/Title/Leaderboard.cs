@@ -11,6 +11,7 @@ public class Leaderboard : MonoBehaviour
     [SerializeField]
     private List<TextMeshProUGUI> scores;
     private List<int> scoresList = new List<int>(new int[10]);
+    public GameObject button;
 
     private string publicLeaderboardKey = "1b1e2bb647b1f858a6ea7822f0f30966ae876ca1c62fffc571144a8122946fbc";
 
@@ -31,6 +32,7 @@ public class Leaderboard : MonoBehaviour
             if(GameObject.Find("Loading") != null)
             {
                 GameObject.Find("Loading").SetActive(false);
+                button.SetActive(true);
             }
         }));
     }
