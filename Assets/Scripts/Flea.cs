@@ -27,6 +27,7 @@ public class Flea : MonoBehaviour
         targetPosition = GridPosition(transform.position);
         targetPosition.y += direction.y;
         sfxManager = FindObjectOfType<SFXManager>();
+        speed *= FindObjectOfType<PlayerManager>().GetMultiplier();
     }
 
     // Update is called once per frame

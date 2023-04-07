@@ -26,6 +26,7 @@ public class Centipede : MonoBehaviour
     void Start()
     {
         homeArea = GameObject.Find("HomeArea").GetComponent<BoxCollider2D>();
+        speed *= FindObjectOfType<PlayerManager>().GetMultiplier();
         Respawn();
     }
 
@@ -104,6 +105,8 @@ public class Centipede : MonoBehaviour
         if(segments.Count == 0)
         {
             FindObjectOfType<CentipedeSpawner>().Spawn();
+            FindObjectOfType<PlayerManager>().wavesCleared++;
+            FindObjectOfType<FleaSpawner>().mushroomCountThreshold += 2;
             Destroy(gameObject);
         }
     }

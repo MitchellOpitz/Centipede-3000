@@ -36,6 +36,7 @@ public class Spider : MonoBehaviour
 
         xDirection = isMovingRight ? 1 : -1;
         sfxManager = FindObjectOfType<SFXManager>();
+        speed *= FindObjectOfType<PlayerManager>().GetMultiplier();
     }
 
     private void Update()

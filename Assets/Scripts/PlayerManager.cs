@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject UICanvas;
     public GameObject GameOverCanvas;
     public GameObject player;
+    public int wavesCleared;
 
     private int currentLives;
     private List<GameObject> lifeIcons = new List<GameObject>();
@@ -19,6 +20,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         currentLives = startingLives;
+        wavesCleared = 0;
         UpdateUI();
     }
 
@@ -109,6 +111,16 @@ public class PlayerManager : MonoBehaviour
     {
         currentLives++;
         UpdateUI();
+    }
+
+    public float GetMultiplier()
+    {
+        var multiplier = 1 + (wavesCleared * 0.05f);
+        if (multiplier > 2)
+        {
+            multiplier = 2;
+        }
+        return multiplier;
     }
 
 }

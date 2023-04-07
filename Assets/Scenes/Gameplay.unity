@@ -3564,6 +3564,7 @@ MonoBehaviour:
   UICanvas: {fileID: 400709356}
   GameOverCanvas: {fileID: 361417362}
   player: {fileID: 284705078}
+  wavesCleared: 0
 --- !u!1 &1435279141
 GameObject:
   m_ObjectHideFlags: 0

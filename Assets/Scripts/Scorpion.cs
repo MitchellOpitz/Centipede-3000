@@ -18,6 +18,7 @@ public class Scorpion : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sfxManager = FindObjectOfType<SFXManager>();
+        speed *= FindObjectOfType<PlayerManager>().GetMultiplier();
     }
 
     private void Update()
