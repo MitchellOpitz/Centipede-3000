@@ -20,6 +20,10 @@ public class Mushroom : MonoBehaviour
     {
         isPoisoned = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (Mathf.Abs(transform.position.y) > 9 || Mathf.Abs(transform.position.x) > 20)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // function to damage the mushroom

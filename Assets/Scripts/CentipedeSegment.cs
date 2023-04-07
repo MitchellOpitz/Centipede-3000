@@ -52,6 +52,10 @@ public class CentipedeSegment : MonoBehaviour
         Vector2 gridPosition = GridPosition(transform.position);
         targetPosition = gridPosition;
         targetPosition.x += direction.x;
+        if (Mathf.Abs(targetPosition.x) > 30)
+        {
+            centipede.Remove(this, transform.position);
+        }
 
         if (Physics2D.OverlapBox(targetPosition, Vector2.zero, 0f, centipede.collisionMask))
         {
