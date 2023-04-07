@@ -156,7 +156,7 @@ MonoBehaviour:
   - {fileID: -3374163915202838278, guid: aebe7f2861ee0824eaea705f192536cc, type: 3}
   - {fileID: 7410942923270305074, guid: aebe7f2861ee0824eaea705f192536cc, type: 3}
   health: 4
-  points: 1
+  points: 100
   isPoisoned: 0
   redParticles: {fileID: 7208899319133786326, guid: 28d5170fac880f64fa47a0fff3a5c851, type: 3}
   greenParticles: {fileID: 9212437547802705525, guid: d200653713789154cae2a16cb56e88dc, type: 3}
@@ -173,5 +173,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04e428a40b0192b49a3c2412d025fd0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 1
+  points: 100
   scorePopUpPrefab: {fileID: 5301276141051815995, guid: bc2b9d2c00c27b84a8f5992dc0bc4ee4, type: 3}

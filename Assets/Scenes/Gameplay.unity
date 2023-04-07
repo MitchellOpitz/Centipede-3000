@@ -3529,6 +3529,7 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 1629424100}
   gameOverScoreText: {fileID: 1334664368}
+  extraLifeScore: 1200000
   submitScoreEvent:
     m_PersistentCalls:
       m_Calls:

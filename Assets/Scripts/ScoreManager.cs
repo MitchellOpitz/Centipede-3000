@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour
     public int score = 0;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverScoreText;
+    public int extraLifeScore;
 
     public UnityEvent<string, int> submitScoreEvent;
     [SerializeField]
@@ -20,7 +21,7 @@ public class ScoreManager : MonoBehaviour
     private void Start()
     {
         score = 0;
-        nextExtraLife = 12000;
+        nextExtraLife = extraLifeScore;
         UpdateScoreText();
     }
 
@@ -42,7 +43,7 @@ public class ScoreManager : MonoBehaviour
         if(score > nextExtraLife)
         {
             FindObjectOfType<PlayerManager>().ExtraLife();
-            nextExtraLife += 12000;
+            nextExtraLife += extraLifeScore;
         }
     }
 

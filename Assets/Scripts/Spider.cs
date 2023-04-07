@@ -11,6 +11,7 @@ public class Spider : MonoBehaviour
     public ParticleSystem redParticles;
     public ParticleSystem greenParticles;
     public ParticleSystem whiteParticles;
+    public int baseScore;
 
     private Vector2 currentTarget;
     private int xDirection;
@@ -85,16 +86,16 @@ public class Spider : MonoBehaviour
         var score = GetComponent<ScoreDisplay>();
         if(transform.position.y > -3)
         {
-            score.UpdateScore(300);
-            FindObjectOfType<ScoreManager>().AddPoints(300);
+            score.UpdateScore(baseScore);
+            FindObjectOfType<ScoreManager>().AddPoints(baseScore);
         } else if (transform.position.y > -6)
         {
-            score.UpdateScore(600);
-            FindObjectOfType<ScoreManager>().AddPoints(600);
+            score.UpdateScore(baseScore * 2);
+            FindObjectOfType<ScoreManager>().AddPoints(baseScore * 2);
         } else
         {
-            score.UpdateScore(900);
-            FindObjectOfType<ScoreManager>().AddPoints(900);
+            score.UpdateScore(baseScore * 3);
+            FindObjectOfType<ScoreManager>().AddPoints(baseScore * 3);
         }
 
         GetComponent<ScoreDisplay>().CallScore();

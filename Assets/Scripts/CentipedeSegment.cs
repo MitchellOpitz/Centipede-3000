@@ -16,6 +16,7 @@ public class CentipedeSegment : MonoBehaviour
 
     private bool isPoisoned = false;
     private SFXManager sfxManager;
+    public int baseScore = 1000;
 
     // Start is called before the first frame update
     void Awake()
@@ -134,10 +135,10 @@ public class CentipedeSegment : MonoBehaviour
         FindObjectOfType<CameraShake>().Shake();
         if (isHead)
         {
-            GetComponent<ScoreDisplay>().UpdateScore(100);
+            GetComponent<ScoreDisplay>().UpdateScore(baseScore * 10);
         } else
         {
-            GetComponent<ScoreDisplay>().UpdateScore(10);
+            GetComponent<ScoreDisplay>().UpdateScore(baseScore);
         }
         GetComponent<ScoreDisplay>().CallScore();
         sfxManager.Play("Splat");

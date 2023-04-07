@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   maxX: 20
-  points: 1000
+  points: 100000
   redParticles: {fileID: 7208899319133786326, guid: 28d5170fac880f64fa47a0fff3a5c851, type: 3}
   whiteParticles: {fileID: 7208899319133786326, guid: fbd101a3935dd0b498f5a4e0d5ccfb28, type: 3}
 --- !u!114 &-228394205806780532
@@ -169,5 +169,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04e428a40b0192b49a3c2412d025fd0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 1000
+  points: 100000
   scorePopUpPrefab: {fileID: 5301276141051815995, guid: bc2b9d2c00c27b84a8f5992dc0bc4ee4, type: 3}
