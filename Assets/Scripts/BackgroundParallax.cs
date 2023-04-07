@@ -10,7 +10,10 @@ public class BackgroundParallax : MonoBehaviour
 
     void Start()
     {
-        lastPlayerPosition = player.position;
+        if(player != null)
+        {
+            lastPlayerPosition = player.position;
+        }
     }
 
     void LateUpdate()
