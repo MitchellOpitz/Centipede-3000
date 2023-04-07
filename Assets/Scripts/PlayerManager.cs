@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject GameOverCanvas;
     public GameObject player;
     public int wavesCleared;
+    public Vector3 playerSpawnPosition;
 
     private int currentLives;
     private List<GameObject> lifeIcons = new List<GameObject>();
@@ -71,16 +72,21 @@ public class PlayerManager : MonoBehaviour
         // Disable the player's collider and renderer
         player.GetComponent<Collider2D>().enabled = false;
         player.GetComponent<SpriteRenderer>().enabled = false;
+        player.GetComponent<PlayerShoot>().enabled = false;
+        player.GetComponent<PlayerMovement>().enabled = false;
 
         // Wait for 3 seconds
         yield return new WaitForSeconds(3f);
 
         // Move the player to the respawn position
-        transform.position = new Vector3(0f, 0f, 0f);
+        player.transform.position = playerSpawnPosition;
+        FindObjectOfType<PlayerManager>().wavesCleared = 0;
 
         // Enable the player's collider and renderer
         player.GetComponent<Collider2D>().enabled = true;
         player.GetComponent<SpriteRenderer>().enabled = true;
+        player.GetComponent<PlayerShoot>().enabled = true;
+        player.GetComponent<PlayerMovement>().enabled = true;
     }
 
     IEnumerator GameOver()

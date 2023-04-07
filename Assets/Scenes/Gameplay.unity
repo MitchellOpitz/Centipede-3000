@@ -3565,6 +3565,7 @@ MonoBehaviour:
   GameOverCanvas: {fileID: 361417362}
   player: {fileID: 284705078}
   wavesCleared: 0
+  playerSpawnPosition: {x: 0.25, y: -9, z: 0}
 --- !u!1 &1435279141
 GameObject:
   m_ObjectHideFlags: 0
@@ -5681,11 +5682,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1747184425628188896, guid: 834f705243ac6244d8930e3218330de8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.28
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1747184425628188896, guid: 834f705243ac6244d8930e3218330de8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.62
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 1747184425628188896, guid: 834f705243ac6244d8930e3218330de8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5774,6 +5775,10 @@ PrefabInstance:
     - target: {fileID: 1747184425628188907, guid: 834f705243ac6244d8930e3218330de8, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294429613030233781, guid: 834f705243ac6244d8930e3218330de8, type: 3}
+      propertyPath: fireRate
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 834f705243ac6244d8930e3218330de8, type: 3}
