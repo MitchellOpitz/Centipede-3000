@@ -86,7 +86,7 @@ public class CentipedeSegment : MonoBehaviour
             targetPosition.y = gridPosition.y + direction.y;
 
             Bounds homeBounds = centipede.homeArea.bounds;
-            if (targetPosition.y < homeBounds.min.y)
+            if (targetPosition.y < (homeBounds.min.y + 1))
             {
                 //Debug.Log("Reached bottom.");
                 //Debug.Log("Head Not Poisoned.");
