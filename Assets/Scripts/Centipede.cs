@@ -89,13 +89,13 @@ public class Centipede : MonoBehaviour
 
         if (segment.isHead)
         {
-            FindObjectOfType<ScoreManager>().AddPoints(100);
+            FindObjectOfType<ScoreManager>().AddPoints(segment.baseScore * 10);
             FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(greenParticles, segmentPosition);
             FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(whiteParticles, segmentPosition);
             FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(redParticles, segmentPosition);
         } else
         {
-            FindObjectOfType<ScoreManager>().AddPoints(10);
+            FindObjectOfType<ScoreManager>().AddPoints(segment.baseScore);
             FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(greenParticles, segmentPosition);
             FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(whiteParticles, segmentPosition);
         }
