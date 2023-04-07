@@ -76,7 +76,6 @@ public class Flea : MonoBehaviour
         {
             // Instantiate a new mushroom at the target position
             Instantiate(mushroomPrefab, position, Quaternion.identity);
-            FindObjectOfType<MushroomCounter>().Add();
         }
     }
 

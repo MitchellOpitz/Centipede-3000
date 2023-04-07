@@ -24,7 +24,6 @@ public class MushroomSpawner : MonoBehaviour
             spawnPos.y = Mathf.RoundToInt(spawnPos.y / gridSize.y) * gridSize.y;
 
             Instantiate(mushroomPrefab, spawnPos, Quaternion.identity);
-            FindObjectOfType<MushroomCounter>().Add();
         }
     }
 }

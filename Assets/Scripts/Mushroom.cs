@@ -39,7 +39,6 @@ public class Mushroom : MonoBehaviour
         if (health <= 0) // if the health is 0 or less
         {
             FindObjectOfType<ScoreManager>().AddPoints(points);
-            FindObjectOfType<MushroomCounter>().Remove();
             GetComponent<ScoreDisplay>().CallScore();
             Destroy(gameObject); // destroy the current mushroom object
         } else

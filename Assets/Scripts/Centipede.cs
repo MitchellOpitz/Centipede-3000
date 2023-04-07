@@ -72,7 +72,6 @@ public class Centipede : MonoBehaviour
     {
         Vector3 position = GridPosition(segment.transform.position);
         Instantiate(mushroomPrefab, position, Quaternion.identity);
-        FindObjectOfType<MushroomCounter>().Add();
 
         if (segment.ahead != null)
         {

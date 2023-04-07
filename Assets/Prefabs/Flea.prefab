@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   yThreshold: -15
-  mushroomSpawnChance: 0.33
+  mushroomSpawnChance: 0.25
   maxMushroomY: 10
   minMushroomY: -7
   points: 20000

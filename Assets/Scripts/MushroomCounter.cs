@@ -6,15 +6,12 @@ public class MushroomCounter : MonoBehaviour
 {
     public int mushroomCount = 0;
 
-    public void Add()
+    public void Update()
     {
-        mushroomCount++;
-        //Debug.Log("Mushroom Count: " + mushroomCount);
-    }
+        // Find all GameObjects with the "Mushroom" tag
+        GameObject[] mushrooms = GameObject.FindGameObjectsWithTag("Mushroom");
 
-    public void Remove()
-    {
-        mushroomCount--;
-        //Debug.Log("Mushroom Count: " + mushroomCount);
+        // Set the initial mushroomCount to the number of mushrooms found
+        mushroomCount = mushrooms.Length;
     }
 }
