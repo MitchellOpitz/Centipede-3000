@@ -80,7 +80,8 @@ public class PlayerManager : MonoBehaviour
 
         // Move the player to the respawn position
         player.transform.position = playerSpawnPosition;
-        FindObjectOfType<PlayerManager>().wavesCleared = 0;
+        wavesCleared = 0;
+        FindObjectOfType<FleaSpawner>().ResetThreshold();
 
         // Enable the player's collider and renderer
         player.GetComponent<Collider2D>().enabled = true;

@@ -10,7 +10,7 @@ public class PlayerShoot : MonoBehaviour
     private float nextFireTime = 0f;
     private SFXManager sfxManager;
     private bool autoFireEnabled = false;
-    private float autoFireTime = 5f; // default autofire time is 5 seconds
+    public float autoFireTime = 5f; // default autofire time is 5 seconds
     private float autoFireEndTime = 0f;
 
     // DELETE AFTER POWERUP CREATED
@@ -49,7 +49,7 @@ public class PlayerShoot : MonoBehaviour
         // DELETE AFTER POWERUP CREATED
         if (Time.time > timeStart + 10 && firstTime)
         {
-            EnableAutoFire(5f);
+            EnableAutoFire(autoFireTime);
             Debug.Log("Enabling autofire");
             firstTime = !firstTime;
         }

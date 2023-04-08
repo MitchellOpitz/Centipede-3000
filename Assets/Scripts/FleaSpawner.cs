@@ -12,12 +12,14 @@ public class FleaSpawner : MonoBehaviour
     public float spawnY = 11f;
 
     private MushroomCounter mushroomCounter;
+    private int startingThreshold;
     private float timer = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
         mushroomCounter = FindObjectOfType<MushroomCounter>();
+        startingThreshold = mushroomCountThreshold;
     }
 
     // Update is called once per frame
@@ -37,5 +39,10 @@ public class FleaSpawner : MonoBehaviour
         float spawnX = Random.Range(minX, maxX);
         Vector3 spawnPosition = new Vector3(spawnX, spawnY, 0f);
         Instantiate(fleaPrefab, spawnPosition, Quaternion.identity);
+    }
+
+    public void ResetThreshold()
+    {
+        mushroomCountThreshold = startingThreshold;
     }
 }
