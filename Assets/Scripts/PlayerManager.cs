@@ -109,6 +109,7 @@ public class PlayerManager : MonoBehaviour
             if (player.GetComponent<SpriteRenderer>().enabled == false)
             {
                 player.GetComponent<SpriteRenderer>().enabled = true;
+                player.GetComponent<PlayerMovement>().hasBeenHit = false;
             }
         }
     }

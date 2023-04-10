@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float minX, maxX, minY, maxY;
     public float overlapRadius = 1f;
     public Vector3 overlapOffset = Vector3.zero;
+    public bool hasBeenHit = false;
 
     private bool isColliding;
 
@@ -47,11 +48,19 @@ public class PlayerMovement : MonoBehaviour
             isColliding = true;
         }
 
-        if (other.gameObject.CompareTag("Centipede") ||
-            other.gameObject.CompareTag("Flea") ||
+        if (other.gameObject.CompareTag("Flea") ||
             other.gameObject.CompareTag("Spider"))
         {
             FindObjectOfType<PlayerManager>().LoseLife();
+        }
+
+        if (other.gameObject.CompareTag("Centipede"))
+        {
+            if (!hasBeenHit)
+            {
+                hasBeenHit = true;
+                FindObjectOfType<PlayerManager>().LoseLife();
+            }
         }
     }
 
