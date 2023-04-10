@@ -95,6 +95,7 @@ public class Flea : MonoBehaviour
         FindObjectOfType<CameraShake>().Shake();
         GetComponent<ScoreDisplay>().CallScore();
         sfxManager.Play("Splat");
+        FindObjectOfType<Achievements>().UpdateFlea();
         Destroy(gameObject); // destroy the current mushroom object
     }
 }

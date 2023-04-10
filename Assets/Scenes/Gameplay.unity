@@ -1871,7 +1871,7 @@ MonoBehaviour:
   soundEffects:
   - name: Shoot
     clip: {fileID: 8300000, guid: bacff5d4e61f32943b63cf2754dae74b, type: 3}
-    volume: 1
+    volume: 0.829
     pitch: 1.17
     loop: 0
     playOnAwake: 0
@@ -4218,6 +4218,7 @@ Transform:
   - {fileID: 1576346193}
   - {fileID: 786198962}
   - {fileID: 449228718}
+  - {fileID: 2063627205}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7110,6 +7111,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044597415}
   m_CullTransparentMesh: 1
+--- !u!1 &2063627204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2063627205}
+  - component: {fileID: 2063627206}
+  m_Layer: 0
+  m_Name: Achievements
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2063627205
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063627204}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1156196285}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2063627206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063627204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9623e51bcf7692e4e84beb26f52a063d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centipedesDestroyed: 0
+  spidersDestroyed: 0
+  scorpionsDestroyed: 0
+  fleasDestroyed: 0
+  resetPrefs: 1
+  canvas: {fileID: 1775933043}
+  textObject: {fileID: 0}
 --- !u!1 &2073866476
 GameObject:
   m_ObjectHideFlags: 0
@@ -7339,7 +7390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5294429613030233781, guid: 834f705243ac6244d8930e3218330de8, type: 3}
       propertyPath: autoFireTime
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 834f705243ac6244d8930e3218330de8, type: 3}

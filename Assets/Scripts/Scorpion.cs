@@ -55,6 +55,7 @@ public class Scorpion : MonoBehaviour
         FindObjectOfType<CameraShake>().Shake();
         GetComponent<ScoreDisplay>().CallScore();
         sfxManager.Play("Splat");
+        FindObjectOfType<Achievements>().UpdateScorpions();
         Destroy(gameObject); // destroy the current mushroom object
     }
 }

@@ -660,6 +660,8 @@ MonoBehaviour:
     sceneName: Options
   - text: High Scores
     sceneName: HighScores
+  - text: Achievements
+    sceneName: Achievements
 --- !u!114 &1967904965
 MonoBehaviour:
   m_ObjectHideFlags: 0

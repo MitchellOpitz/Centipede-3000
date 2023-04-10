@@ -105,6 +105,7 @@ public class Spider : MonoBehaviour
         FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(whiteParticles, transform.position);
         FindObjectOfType<CameraShake>().Shake();
         sfxManager.Play("Splat");
+        FindObjectOfType<Achievements>().UpdateSpiders();
         Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D other)

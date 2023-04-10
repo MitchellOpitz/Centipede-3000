@@ -106,6 +106,7 @@ public class Centipede : MonoBehaviour
             FindObjectOfType<CentipedeSpawner>().Spawn();
             FindObjectOfType<PlayerManager>().wavesCleared++;
             FindObjectOfType<FleaSpawner>().mushroomCountThreshold += 2;
+            FindObjectOfType<Achievements>().UpdateCentipedes();
             Destroy(gameObject);
         }
     }
