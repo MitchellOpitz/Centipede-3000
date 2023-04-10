@@ -17,6 +17,11 @@ public class PlayerManager : MonoBehaviour
     private int currentLives;
     private List<GameObject> lifeIcons = new List<GameObject>();
 
+    private bool isInvulnerable = false;
+    private float invulnerabilityTime = 3f;
+    private float invulnerabilityFlashRate = 0.1f;
+    private Coroutine flashingCoroutine;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,10 +89,28 @@ public class PlayerManager : MonoBehaviour
         FindObjectOfType<FleaSpawner>().ResetThreshold();
 
         // Enable the player's collider and renderer
-        player.GetComponent<Collider2D>().enabled = true;
         player.GetComponent<SpriteRenderer>().enabled = true;
         player.GetComponent<PlayerShoot>().enabled = true;
         player.GetComponent<PlayerMovement>().enabled = true;
+
+        isInvulnerable = true;
+        flashingCoroutine = StartCoroutine(FlashSprite());
+
+        // Wait for the invulnerability time
+        yield return new WaitForSeconds(invulnerabilityTime);
+
+        // Disable invulnerability and stop flashing the player sprite
+        isInvulnerable = false;
+        if (flashingCoroutine != null)
+        {
+            StopCoroutine(flashingCoroutine);
+            flashingCoroutine = null;
+            player.GetComponent<Collider2D>().enabled = true;
+            if (player.GetComponent<SpriteRenderer>().enabled == false)
+            {
+                player.GetComponent<SpriteRenderer>().enabled = true;
+            }
+        }
     }
 
     IEnumerator GameOver()
@@ -128,6 +151,26 @@ public class PlayerManager : MonoBehaviour
             multiplier = 2;
         }
         return multiplier;
+    }
+    IEnumerator FlashSprite()
+    {
+        SpriteRenderer playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
+
+        // Loop until invulnerability ends
+        while (isInvulnerable)
+        {
+            // Toggle the player sprite on and off
+            playerSpriteRenderer.enabled = !playerSpriteRenderer.enabled;
+
+            // Wait for the specified flashing rate
+            yield return new WaitForSeconds(invulnerabilityFlashRate);
+        }
+
+        // Ensure the player sprite is visible when invulnerability ends
+        playerSpriteRenderer.enabled = true;
+
+        // Stop the flashing coroutine
+        flashingCoroutine = null;
     }
 
 }
