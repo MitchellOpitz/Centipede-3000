@@ -7293,7 +7293,7 @@ MonoBehaviour:
   spidersDestroyed: 0
   scorpionsDestroyed: 0
   fleasDestroyed: 0
-  resetPrefs: 1
+  resetPrefs: 0
   textBox: {fileID: 1672637719}
 --- !u!1 &2073866476
 GameObject:
