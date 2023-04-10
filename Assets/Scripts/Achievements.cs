@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Achievements : MonoBehaviour
 {
@@ -12,13 +13,15 @@ public class Achievements : MonoBehaviour
 
     public bool resetPrefs;
 
-    public Transform canvas;
-    public GameObject textObject;
+    public TMP_Text textBox;
 
     private float startTime;
+    private bool unlocked = false;
+    private Vector3 startingPosition;
 
     private void Start()
     {
+        startingPosition = textBox.transform.position;
         if (resetPrefs)
         {
             PlayerPrefs.SetInt("centipedesDestroyed", 0);
@@ -141,44 +144,33 @@ public class Achievements : MonoBehaviour
     }
 
     private void TriggerAchievement(string textString)
-    {/*
-        // Create a new Text object in the middle of the screen
-        textObject = new GameObject("TextObject");
-        textObject.transform.SetParent(canvas.transform);
-        RectTransform rectTransform = textObject.AddComponent<RectTransform>();
-        rectTransform.sizeDelta = new Vector2(40, 10);
-        rectTransform.anchoredPosition = Vector2.zero;
-
-        // Add a Text component to the object and set the text
-        Text textComponent = textObject.AddComponent<Text>();
-        textComponent.text = textString;
-        textComponent.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
-        textComponent.fontSize = 4;
-        textComponent.color = Color.white;
-        textComponent.alignment = TextAnchor.MiddleCenter;
-        startTime = Time.time;*/
+    {
         Debug.Log(textString);
+        textBox.gameObject.SetActive(true);
+        textBox.text = textString;
+        startTime = Time.time;
+        unlocked = true;
     }
 
     private void Update()
     {
-        /*
-        if (textObject != null)
+        if (textBox != null)
         {
             // Move the ScorePopUp up over time
-            transform.position += Vector3.up * 1f * Time.deltaTime;
+            textBox.transform.position += Vector3.up * 1f * Time.deltaTime;
 
             // Fade out the ScorePopUp over time
-            float t = (Time.time - startTime) / 1.5f;
+            float t = (Time.time - startTime) / 3f;
             float alpha = Mathf.Lerp(1.0f, 0.0f, t);
-            textObject.GetComponent<Text>().color = new Color(textObject.GetComponent<Text>().color.r, textObject.GetComponent<Text>().color.g, textObject.GetComponent<Text>().color.b, alpha);
+            textBox.color = new Color(textBox.color.r, textBox.color.g, textBox.color.b, alpha);
 
             // Destroy the ScorePopUp when it's done fading out
             if (t >= 1.0f)
             {
-                Destroy(gameObject);
+                unlocked = false;
+                textBox.transform.position = startingPosition;
+                textBox.gameObject.SetActive(false);
             }
         }
-        */
     }
 }
