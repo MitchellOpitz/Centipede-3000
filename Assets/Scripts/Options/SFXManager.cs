@@ -28,7 +28,7 @@ public class SFXManager : MonoBehaviour
             // Create an AudioSource for each sound effect
             AudioSource source = gameObject.AddComponent<AudioSource>();
             source.clip = effect.clip;
-            source.volume = effect.volume;
+            source.volume = effect.volume * PlayerPrefs.GetFloat("SFXLevel");
             source.pitch = effect.pitch;
             source.loop = effect.loop;
             source.playOnAwake = effect.playOnAwake;
@@ -48,6 +48,15 @@ public class SFXManager : MonoBehaviour
         else
         {
             Debug.LogWarning("No sound effect with name " + name + " found!");
+        }
+    }
+
+    public void UpdateVolume()
+    {
+        foreach (SoundEffect effect in soundEffects)
+        {
+            AudioSource source = audioSources[effect.name];
+            source.volume = effect.volume * PlayerPrefs.GetFloat("SFXLevel");
         }
     }
 }
