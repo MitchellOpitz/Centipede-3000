@@ -643,6 +643,8 @@ MonoBehaviour:
   options:
   - text: Start
     sceneName: Gameplay
+  - text: Options
+    sceneName: Options
   - text: High Scores
     sceneName: HighScores
 --- !u!114 &1967904965
