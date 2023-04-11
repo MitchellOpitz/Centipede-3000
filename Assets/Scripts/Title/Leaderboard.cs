@@ -47,13 +47,13 @@ public class Leaderboard : MonoBehaviour
 
     public void GetHighScores()
     {
-        Debug.Log("Retrieving High Scores.");
+        //Debug.Log("Retrieving High Scores.");
         LeaderboardCreator.GetLeaderboard(publicLeaderboardKey, ((msg) =>
         {
             for (int i = 0; i < 10; i++)
             {
                 scoresList[i] = (int)msg[i].Score;
-                Debug.Log(scoresList[i]);
+                //Debug.Log(scoresList[i]);
             }
         }));
     }
@@ -62,13 +62,13 @@ public class Leaderboard : MonoBehaviour
     {
         for (int i = 0; i < scoresList.Count; i++)
         {
-            Debug.Log("Comparing: " + myScore + " to " + scoresList[i]);
+            //Debug.Log("Comparing: " + myScore + " to " + scoresList[i]);
             if (myScore > scoresList[i])
             {
                 return true;
             }
         }
-        Debug.Log("No High Score.");
+        //Debug.Log("No High Score.");
         return false;
     }
 
