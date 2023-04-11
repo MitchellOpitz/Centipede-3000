@@ -11,8 +11,8 @@ public class Centipede : MonoBehaviour
 
     private List<CentipedeSegment> segments = new List<CentipedeSegment>();
 
-    public Sprite headSprite;
-    public Sprite bodySprite;
+    public Sprite[] headSprites;
+    public Sprite[] bodySprites;
 
     public LayerMask collisionMask;
     public BoxCollider2D homeArea;
@@ -22,12 +22,44 @@ public class Centipede : MonoBehaviour
     public ParticleSystem greenParticles;
     public ParticleSystem whiteParticles;
 
+    private int frameCounter = 0;
+    private int currentSpriteIndex = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         homeArea = GameObject.Find("HomeArea").GetComponent<BoxCollider2D>();
         speed *= FindObjectOfType<PlayerManager>().GetMultiplier();
         Respawn();
+    }
+
+    private void Update()
+    {
+        frameCounter++;
+
+        if (frameCounter >= 6)
+        {
+            currentSpriteIndex++;
+            if (currentSpriteIndex >= headSprites.Length)
+            {
+                currentSpriteIndex = 0;
+            }
+            foreach (CentipedeSegment segment in segments)
+            {
+                if (segment != null)
+                {
+                    if (segment.isHead)
+                    {
+                        segment.GetComponent<SpriteRenderer>().sprite = headSprites[currentSpriteIndex];
+                    }
+                    else
+                    {
+                        segment.GetComponent<SpriteRenderer>().sprite = bodySprites[currentSpriteIndex];
+                    }
+                }
+            }
+            frameCounter = 0;
+        }
     }
 
     // Update is called once per frame
@@ -44,7 +76,7 @@ public class Centipede : MonoBehaviour
         {
             Vector2 position = GridPosition(transform.position) + (Vector2.left * i);
             CentipedeSegment segment = Instantiate(segmentPrefab, position, Quaternion.identity);
-            segment.spriteRenderer.sprite = i == 0 ? headSprite : bodySprite;
+            //segment.spriteRenderer.sprite = i == 0 ? headSprites[0] : bodySprites[0];
             segment.centipede = this;
             segments.Add(segment);
         }
@@ -81,7 +113,7 @@ public class Centipede : MonoBehaviour
         if (segment.behind != null)
         {
             segment.behind.ahead = null;
-            segment.behind.spriteRenderer.sprite = headSprite;
+            segment.behind.spriteRenderer.sprite = headSprites[0];
             segment.behind.UpdateHeadSegment();
         }
 

@@ -46,8 +46,24 @@ MonoBehaviour:
   segmentPrefab: {fileID: 1053573370028687858, guid: d96ef9415e961f94f8452e350aad22ca, type: 3}
   mushroomPrefab: {fileID: 7432319562668904359, guid: 68c6ac4ecbd5aa4439c01e7ed0e057d4, type: 3}
   size: 12
-  headSprite: {fileID: 21300000, guid: affe30fd719156643920fa5bb1a85a38, type: 3}
-  bodySprite: {fileID: 21300000, guid: d343e800a1e60c0479ac73230287cc86, type: 3}
+  headSprites:
+  - {fileID: 7810148416436562640, guid: affe30fd719156643920fa5bb1a85a38, type: 3}
+  - {fileID: -3996439465137485153, guid: affe30fd719156643920fa5bb1a85a38, type: 3}
+  - {fileID: 5916537403678373455, guid: affe30fd719156643920fa5bb1a85a38, type: 3}
+  - {fileID: -1699998945556085997, guid: affe30fd719156643920fa5bb1a85a38, type: 3}
+  - {fileID: 7487482435028987011, guid: affe30fd719156643920fa5bb1a85a38, type: 3}
+  - {fileID: -7726106275563494260, guid: affe30fd719156643920fa5bb1a85a38, type: 3}
+  - {fileID: -293158798758845302, guid: affe30fd719156643920fa5bb1a85a38, type: 3}
+  - {fileID: -5282632474807953112, guid: affe30fd719156643920fa5bb1a85a38, type: 3}
+  bodySprites:
+  - {fileID: 2544214875813044954, guid: d343e800a1e60c0479ac73230287cc86, type: 3}
+  - {fileID: 3275205510245595836, guid: d343e800a1e60c0479ac73230287cc86, type: 3}
+  - {fileID: -4563034757867888804, guid: d343e800a1e60c0479ac73230287cc86, type: 3}
+  - {fileID: 8473622911193829559, guid: d343e800a1e60c0479ac73230287cc86, type: 3}
+  - {fileID: 5591518221095567418, guid: d343e800a1e60c0479ac73230287cc86, type: 3}
+  - {fileID: -3563933911098289355, guid: d343e800a1e60c0479ac73230287cc86, type: 3}
+  - {fileID: 990589758837478555, guid: d343e800a1e60c0479ac73230287cc86, type: 3}
+  - {fileID: 8350917451746665873, guid: d343e800a1e60c0479ac73230287cc86, type: 3}
   collisionMask:
     serializedVersion: 2
     m_Bits: 448
