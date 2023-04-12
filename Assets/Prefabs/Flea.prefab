@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2434241863889748758}
   - component: {fileID: 3712713986126955193}
   - component: {fileID: 1507923126}
+  - component: {fileID: 5814327575041204524}
   m_Layer: 10
   m_Name: Flea
   m_TagString: Flea
@@ -169,3 +170,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.139986, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5814327575041204524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2434241863889748759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad75139cb875ed2429cb7a20c1fb0d00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -4232184650267900402, guid: b410955eb3e22e440a4b2952be1e6bfc, type: 3}
+  - {fileID: 6972905541503414612, guid: b410955eb3e22e440a4b2952be1e6bfc, type: 3}
+  - {fileID: 5284374308621572873, guid: b410955eb3e22e440a4b2952be1e6bfc, type: 3}
+  - {fileID: 8618205172420290974, guid: b410955eb3e22e440a4b2952be1e6bfc, type: 3}
+  spriteRenderer: {fileID: 2434241863889748841}

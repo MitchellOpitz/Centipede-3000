@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7056443911341418262}
   - component: {fileID: -724516281594110563}
   - component: {fileID: 7056443911341418263}
+  - component: {fileID: 4115578796397000303}
   m_Layer: 11
   m_Name: Spider
   m_TagString: Spider
@@ -168,3 +169,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4115578796397000303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056443911341418259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad75139cb875ed2429cb7a20c1fb0d00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -3438905571476058607, guid: 95aaa8c91016e6d4da73f67d22328975, type: 3}
+  - {fileID: -3439666431560065214, guid: 95aaa8c91016e6d4da73f67d22328975, type: 3}
+  - {fileID: 594067532846947361, guid: 95aaa8c91016e6d4da73f67d22328975, type: 3}
+  - {fileID: -8157787870349292481, guid: 95aaa8c91016e6d4da73f67d22328975, type: 3}
+  - {fileID: 8989802596421927958, guid: 95aaa8c91016e6d4da73f67d22328975, type: 3}
+  - {fileID: 8102673786920169266, guid: 95aaa8c91016e6d4da73f67d22328975, type: 3}
+  - {fileID: -6725166634347724402, guid: 95aaa8c91016e6d4da73f67d22328975, type: 3}
+  - {fileID: 905633704357905193, guid: 95aaa8c91016e6d4da73f67d22328975, type: 3}
+  spriteRenderer: {fileID: 7056443911341418261}
