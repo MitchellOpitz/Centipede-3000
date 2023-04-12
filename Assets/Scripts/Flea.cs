@@ -10,6 +10,7 @@ public class Flea : MonoBehaviour
     public float maxMushroomY = 10f;
     public float minMushroomY = -10f;
     public int points = 200;
+    public GameObject smallExplosion;
 
     public GameObject mushroomPrefab;
 
@@ -95,6 +96,7 @@ public class Flea : MonoBehaviour
         FindObjectOfType<CameraShake>().Shake();
         GetComponent<ScoreDisplay>().CallScore();
         sfxManager.Play("Splat");
+        Instantiate(smallExplosion, transform.position, Quaternion.identity);
         FindObjectOfType<Achievements>().UpdateFlea();
         Destroy(gameObject); // destroy the current mushroom object
     }

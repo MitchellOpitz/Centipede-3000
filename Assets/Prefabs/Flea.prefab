@@ -126,6 +126,7 @@ MonoBehaviour:
   maxMushroomY: 10
   minMushroomY: -7
   points: 20000
+  smallExplosion: {fileID: 225347265493799652, guid: dd18ffd0101d2ef49b074576ec7e9475, type: 3}
   mushroomPrefab: {fileID: 9016401668687272156, guid: 68c6ac4ecbd5aa4439c01e7ed0e057d4, type: 3}
   redParticles: {fileID: 7208899319133786326, guid: 28d5170fac880f64fa47a0fff3a5c851, type: 3}
   greenParticles: {fileID: 9212437547802705525, guid: d200653713789154cae2a16cb56e88dc, type: 3}
@@ -188,3 +189,4 @@ MonoBehaviour:
   - {fileID: 5284374308621572873, guid: b410955eb3e22e440a4b2952be1e6bfc, type: 3}
   - {fileID: 8618205172420290974, guid: b410955eb3e22e440a4b2952be1e6bfc, type: 3}
   spriteRenderer: {fileID: 2434241863889748841}
+  playOnce: 0

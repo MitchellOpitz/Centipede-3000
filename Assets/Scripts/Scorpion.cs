@@ -10,6 +10,7 @@ public class Scorpion : MonoBehaviour
 
     public ParticleSystem redParticles;
     public ParticleSystem whiteParticles;
+    public GameObject largeExplosion;
 
     private Rigidbody2D rb;
     private SFXManager sfxManager;
@@ -55,6 +56,7 @@ public class Scorpion : MonoBehaviour
         FindObjectOfType<CameraShake>().Shake();
         GetComponent<ScoreDisplay>().CallScore();
         sfxManager.Play("Splat");
+        Instantiate(largeExplosion, transform.position, Quaternion.identity);
         FindObjectOfType<Achievements>().UpdateScorpions();
         Destroy(gameObject); // destroy the current mushroom object
     }

@@ -12,6 +12,7 @@ public class Spider : MonoBehaviour
     public ParticleSystem greenParticles;
     public ParticleSystem whiteParticles;
     public int baseScore;
+    public GameObject largeExplosion;
 
     private Vector2 currentTarget;
     private int xDirection;
@@ -105,6 +106,7 @@ public class Spider : MonoBehaviour
         FindObjectOfType<ParticleEffectsManager>().PlayParticleSystem(whiteParticles, transform.position);
         FindObjectOfType<CameraShake>().Shake();
         sfxManager.Play("Splat");
+        Instantiate(largeExplosion, transform.position, Quaternion.identity);
         FindObjectOfType<Achievements>().UpdateSpiders();
         Destroy(gameObject);
     }

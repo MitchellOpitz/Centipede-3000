@@ -125,6 +125,7 @@ MonoBehaviour:
   points: 100000
   redParticles: {fileID: 7208899319133786326, guid: 28d5170fac880f64fa47a0fff3a5c851, type: 3}
   whiteParticles: {fileID: 7208899319133786326, guid: fbd101a3935dd0b498f5a4e0d5ccfb28, type: 3}
+  largeExplosion: {fileID: 3866515586090503752, guid: a3ca406c529a5cf45abbb824d8b06581, type: 3}
 --- !u!114 &-228394205806780532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,3 +184,4 @@ MonoBehaviour:
   - {fileID: -237129944876981998, guid: 23bf440d56e01ed4fab69515a44c9db3, type: 3}
   - {fileID: 7652833223193734765, guid: 23bf440d56e01ed4fab69515a44c9db3, type: 3}
   spriteRenderer: {fileID: 2306372234683938691}
+  playOnce: 0

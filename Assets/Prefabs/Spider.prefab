@@ -108,6 +108,7 @@ MonoBehaviour:
   greenParticles: {fileID: 9212437547802705525, guid: d200653713789154cae2a16cb56e88dc, type: 3}
   whiteParticles: {fileID: 7208899319133786326, guid: fbd101a3935dd0b498f5a4e0d5ccfb28, type: 3}
   baseScore: 30000
+  largeExplosion: {fileID: 3866515586090503752, guid: a3ca406c529a5cf45abbb824d8b06581, type: 3}
 --- !u!61 &7056443911341418262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -191,3 +192,4 @@ MonoBehaviour:
   - {fileID: -6725166634347724402, guid: 95aaa8c91016e6d4da73f67d22328975, type: 3}
   - {fileID: 905633704357905193, guid: 95aaa8c91016e6d4da73f67d22328975, type: 3}
   spriteRenderer: {fileID: 7056443911341418261}
+  playOnce: 0
