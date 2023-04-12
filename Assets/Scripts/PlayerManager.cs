@@ -106,10 +106,10 @@ public class PlayerManager : MonoBehaviour
             StopCoroutine(flashingCoroutine);
             flashingCoroutine = null;
             player.GetComponent<Collider2D>().enabled = true;
+            player.GetComponent<PlayerMovement>().hasBeenHit = false;
             if (player.GetComponent<SpriteRenderer>().enabled == false)
             {
                 player.GetComponent<SpriteRenderer>().enabled = true;
-                player.GetComponent<PlayerMovement>().hasBeenHit = false;
             }
         }
     }

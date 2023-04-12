@@ -1689,7 +1689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scorpionPrefab: {fileID: 7056443911341418259, guid: cd02057c63cfc414a864199e12501f1e, type: 3}
-  spawnDelay: 10
+  spawnDelay: 19
   spawnX: -19
   minY: -3
   maxY: 9
@@ -3189,7 +3189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scorpionPrefab: {fileID: 2306372234683938690, guid: 4833a0bc03cbcbb4eb09a78b5a8baa1c, type: 3}
-  spawnDelay: 10
+  spawnDelay: 29
   spawnX: -19
   minY: -3
   maxY: 9
