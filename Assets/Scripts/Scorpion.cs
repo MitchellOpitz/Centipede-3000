@@ -20,6 +20,7 @@ public class Scorpion : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sfxManager = FindObjectOfType<SFXManager>();
         speed *= FindObjectOfType<PlayerManager>().GetMultiplier();
+        transform.position = GridPosition(transform.position);
     }
 
     private void Update()
@@ -59,5 +60,11 @@ public class Scorpion : MonoBehaviour
         Instantiate(largeExplosion, transform.position, Quaternion.identity);
         FindObjectOfType<Achievements>().UpdateScorpions();
         Destroy(gameObject); // destroy the current mushroom object
+    }
+    private Vector2 GridPosition(Vector2 position)
+    {
+        position.x = Mathf.Round(position.x);
+        position.y = Mathf.Round(position.y);
+        return position;
     }
 }
