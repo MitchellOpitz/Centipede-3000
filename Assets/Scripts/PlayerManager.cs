@@ -61,6 +61,8 @@ public class PlayerManager : MonoBehaviour
     {
         currentLives--;
         UpdateUI();
+        FindObjectOfType<SFXManager>().Play("Explosion1");
+        FindObjectOfType<SFXManager>().Play("Explosion2");
         if (currentLives <= 0)
         {
             // Player has lost all lives, trigger game over logic

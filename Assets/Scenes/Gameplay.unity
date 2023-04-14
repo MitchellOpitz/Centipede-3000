@@ -1882,6 +1882,18 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     playOnAwake: 0
+  - name: Explosion1
+    clip: {fileID: 8300000, guid: 05fc07e3ba10d3f46837fb21b13e87bc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - name: Explosion2
+    clip: {fileID: 8300000, guid: 4b5d9169336ddea4e845a28fa386592a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
 --- !u!1 &484772396
 GameObject:
   m_ObjectHideFlags: 0
