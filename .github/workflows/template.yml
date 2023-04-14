@@ -76,7 +76,7 @@ jobs:
        env:
          BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
          CHANNEL: HTML
-         ITCH_GAME: centipede-remake
+         ITCH_GAME: centipede-3000
          ITCH_USER: brainfartstudio
          BRANCH: itch-io
          PACKAGE: build/WebGL
